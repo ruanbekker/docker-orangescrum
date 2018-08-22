@@ -2,7 +2,7 @@
 
 sed -i "s/MYSQL_HOST/${MYSQL_HOST:-localhost}/g" /web/html/app/Config/database.php 
 sed -i "s/MYSQL_USER/${MYSQL_USER:-root}/g" /web/html/app/Config/database.php 
-sed -i "s/MYSQLPASSWORD/${MYSQL_PASSWORD:-password}/g" /web/html/app/Config/database.php 
+sed -i "s/MYSQL_PASSWORD/${MYSQL_PASSWORD:-password}/g" /web/html/app/Config/database.php 
 sed -i "s/MYSQL_DATABASE/${MYSQL_DATABASE:-orangescrum}/g" /web/html/app/Config/database.php 
 sed -i "s/SENDGRID_HOSTNAME/${SENDGRID_HOSTNAME:-ssl://smtp.sendgrid.net}/g" /web/html/app/Config/constants.php
 sed -i "s/SENDGRID_PORT/${SENDGRID_PORT:-465}/g" /web/html/app/Config/constants.php

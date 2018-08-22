@@ -20,28 +20,6 @@ define("SMTP_UNAME", "SENDGRID_KEY");
 define("SMTP_PWORD", "SENDGRID_SECRET");
 //https://www.arclab.com/en/amlc/list-of-smtp-and-imap-servers-mailserver-list.html (Get the list of Host names)
 
-### OR ###
-
-/*
-//Mandrill smtp
-define("SMTP_HOST", "smtp.mandrillapp.com");
-define("SMTP_PORT", "587");
-define("SMTP_UNAME", "youremail@domain.com");
-define("SMTP_PWORD", "******"); //Mandrill API Key
-//https://www.mandrill.com/signup/ (free signup to mandrill)
-*/
-
-### OR ###
-
-/*
-//Sendgrid smtp
-define("SMTP_HOST", "smtp.sendgrid.net");
-define("SMTP_PORT", "587");
-define("SMTP_UNAME", "youremail@domain.com");
-define("SMTP_PWORD", "******");
-//https://sendgrid.com/user/signup (free signup to sendgrid)
-*/
-
 ########################################################################
 define("WEB_DOMAIN", "APP_FQDN"); //ex. demo.orangescrum.com
 define('FROM_EMAIL_NOTIFY', 'APP_NOTIFIER_EMAIL'); //(REQUIRED)
@@ -49,7 +27,7 @@ define('SUPPORT_EMAIL', 'APP_SUPPORT_EMAIL'); //(REQUIRED) From Email
 define('FROM_EMAIL',  'OrangeScrum<'.SUPPORT_EMAIL.'>');
 
 define("DEV_EMAIL", 'APP_DEV_EMAIL'); // Developer Email ID to report the application error
-define('EMAIL_SUBJ', '[Orangescrum]');
+define('EMAIL_SUBJ', '[OrangeScrum]');
 
 // If you have not yet set up the Nohup cronjob, leave it blank
 define('EMAIL_REPLY', "<div style='font-family:Arial;font-size:14px;color:#787878;margin-bottom:5px;'>Just REPLY to this Email the same will be added under the Task. <br/><span style='font-size:11px;'><b>NOTE:</b> Do not remove this original message.</span></div>");
@@ -57,7 +35,7 @@ define('EMAIL_REPLY', "<div style='font-family:Arial;font-size:14px;color:#78787
 define('RELEASE',1); //Increase the release version on every CSS/JS changes to remove the browser cache
 
 ##################### Domain and URL Constants ############################
-define('SUB_FOLDER', '@SUB_FOLDER'); //If your application URL followed by a folder name like: http://your-site.com/folder_name, put your folder name as 'folder_name/'
+define('SUB_FOLDER', '/'); //If your application URL followed by a folder name like: http://your-site.com/folder_name, put your folder name as 'folder_name/'
 
 if(php_sapi_name() === "cli") {
 	define('PROTOCOL', "http://");
