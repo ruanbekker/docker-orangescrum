@@ -38,7 +38,7 @@ define('RELEASE',1); //Increase the release version on every CSS/JS changes to r
 define('SUB_FOLDER', '/'); //If your application URL followed by a folder name like: http://your-site.com/folder_name, put your folder name as 'folder_name/'
 
 if(php_sapi_name() === "cli") {
-	define('PROTOCOL', "http://");
+	define('PROTOCOL', "https://");
 	define('DOMAIN', "APP_FQDN/"); // Please set your application domain (REQUIRED)
 }else{
 	$ht = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on')?"https://":"http://";
@@ -53,7 +53,7 @@ define('HTTP_ROOT', HTTP_SERVER.SUB_FOLDER);
 define('DOMAIN_COOKIE', $_SERVER['SERVER_NAME']);
 define('HTTP_APP', PROTOCOL.DOMAIN.SUB_FOLDER);
 define('HTTPS_HOME', PROTOCOL.DOMAIN.SUB_FOLDER);
-define('HTTP_HOME', "http://".DOMAIN.SUB_FOLDER);
+define('HTTP_HOME', "https://".DOMAIN.SUB_FOLDER);
 
 ##################### Google Keys (Login, Drive, Contacts) ############################
 define("CLIENT_ID", "XXXXXXXXXXXX.apps.googleusercontent.com");
