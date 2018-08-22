@@ -41,7 +41,8 @@ if(php_sapi_name() === "cli") {
 	define('PROTOCOL', "https://");
 	define('DOMAIN', "APP_FQDN/"); // Please set your application domain (REQUIRED)
 }else{
-	$ht = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on')?"https://":"http://";
+	// $ht = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on')?"https://":"http://";
+	$ht = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on')?"https://":"https://";
 	define('PROTOCOL', $ht);
 	if($_SERVER['SERVER_PORT'] != 80)
 		define('DOMAIN', $_SERVER['SERVER_NAME'].":".$_SERVER['SERVER_PORT']."/"); 
