@@ -44,6 +44,7 @@ if(trim($settings['database']) == "") {
 	<!DOCTYPE html>
 	<html>
 	<head>
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 		<meta name="robots" content="noindex,nofollow" />
 		<link rel="shortcut icon" href="images/favicon_new.ico"/>
 		<title>Orangescrum Setup Wizard</title>
